@@ -9,7 +9,7 @@ var ErrorProductPriceTooLow = errors.New("The price for the product is too low")
 var ErrorProductPriceTooHigh = errors.New("The price for the product is too high")
 
 var minimalPrice float64 = 5.00
-var maximumPrice float64 = 30.000
+var maximumPrice float64 = 30.00
 
 // Product model represents a model of the a product
 type Product struct {
@@ -27,7 +27,7 @@ func (product *Product) SetPrice(price float64) (err error) {
 		return
 	}
 	if price > maximumPrice {
-		err = ErrorProductPriceTooLow
+		err = ErrorProductPriceTooHigh
 		return
 	}
 
