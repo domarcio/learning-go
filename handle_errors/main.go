@@ -25,4 +25,5 @@ func main() {
 		return
 	}
 	fmt.Printf("iPhone JSON: %+v\n", string(iphoneJSON))
+	fmt.Printf("My new price is %g\n", iphone.GetPrice())
 }
